@@ -6391,3 +6391,9 @@ const especialidad = [
     db: "especialidad",
   },
 ];
+
+export const allEspecialidad = (): string[] => {
+  return especialidad
+    .flatMap((item) => item.nombre)
+    .sort((a, b) => a.localeCompare(b));
+};
